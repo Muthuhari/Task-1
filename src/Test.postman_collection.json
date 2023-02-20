@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "0b5cfd25-19ed-48d2-b1fe-eb62d42d6c51",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17531261"
+	},
+	"item": [
+		{
+			"name": "Units",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Tenant",
+								"value": "{{xtenant}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ims/unit/list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ims",
+								"unit",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Tenant",
+								"value": "{{xtenant}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actual_name\":\"Kgrtqqqyfghfgsq\",\r\n    \"short_name\":\"Kgytfgdgys\",\r\n    \"allow_decimal\":0\r\n}\r\n     //when sub unit add else main unit doesent need this to add above else remove \r\n    // \"define_base_unit\":{\r\n    //     \"base_unit_id\":4,\r\n    //     \"base_unit_multiplier\":100\r\n    // }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ims/unit/save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ims",
+								"unit",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Tenant",
+								"value": "{{xtenant}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ims/unit/edit/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ims",
+								"unit",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Tenant",
+								"value": "{{xtenant}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actual_name\":\"Kgrty11sq\",\r\n    \"short_name\":\"Kgytys\",\r\n    \"allow_decimal\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ims/unit/update/7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ims",
+								"unit",
+								"update",
+								"7"
+							]
+						},
+						"description": "| **Key** | **Type** | Status |\n| --- | --- | --- |\n| actual_name | string | **Required** |\n| short_name | string | **Required** |\n| allow_decimal | Bool | **Required** |\n| define_base_unit |  | **optianal** |\n| define_base_unit-base_unit_id | int | ~~_Required_~~ |\n| define_base_unit-base_unit_multiplier | float | ~~_Required_~~ |\n\nwhen sub unit add else main unit doesent need this to add above JSON\n\n\"define_base_unit\":{\n\n\"base_unit_id\":4,\n\n\"base_unit_multiplier\":100\n\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Tenant",
+								"value": "{{xtenant}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ims/unit/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ims",
+								"unit",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

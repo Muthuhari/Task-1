@@ -1,0 +1,63 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 7rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+  font-size: 32px;
+}
+th {
+  background-color: rgb(210, 213, 214);
+}
+
+td {
+  background-color: rgb(253, 254, 255);
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 28px;
+}
+.top-right-sentence {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3rem;
+  color: #0c0c0c;
+  font-weight: bold;
+}
+
+.top-left-sentence {
+  position: absolute;
+  font-weight: bold;
+  right: 0;
+  padding: 37rem;
+  color: #0c0c0c;
+}
+button[type="submit"] {
+  background-color: #3f8acc;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+}
